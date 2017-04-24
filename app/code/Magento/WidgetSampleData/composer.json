@@ -9,7 +9,7 @@
         "magento/module-cms": "101.1.*"
     },
     "type": "magento2-module",
-    "version": "100.2.0-dev",
+    "version": "100.2.0-rc1",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
