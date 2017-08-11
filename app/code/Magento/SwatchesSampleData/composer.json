@@ -8,7 +8,7 @@
         "magento/module-eav": "100.2.*"
     },
     "type": "magento2-module",
-    "version": "100.2.0-dev",
+    "version": "100.3.0-rc200",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
