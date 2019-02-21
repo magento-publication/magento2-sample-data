@@ -24,6 +24,22 @@ class Converter extends \Magento\CatalogSampleData\Model\Product\Converter
      */
     private $filesystem;
 
+    public function __construct(
+        \Magento\Catalog\Model\Category\TreeFactory $categoryTreeFactory,
+        \Magento\Catalog\Model\ResourceModel\Category\TreeFactory $categoryResourceTreeFactory,
+        \Magento\Eav\Model\Config $eavConfig,
+        \Magento\Catalog\Model\ResourceModel\Category\CollectionFactory $categoryCollectionFactory,
+        \Magento\Catalog\Model\ResourceModel\Product\Attribute\CollectionFactory $attributeCollectionFactory,
+        \Magento\Eav\Model\ResourceModel\Entity\Attribute\Option\CollectionFactory $attrOptionCollectionFactory,
+        \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory $productCollectionFactory
+    ) {
+        parent::__construct($categoryTreeFactory, $categoryResourceTreeFactory, $eavConfig, $categoryCollectionFactory, $attributeCollectionFactory, $attrOptionCollectionFactory, $productCollectionFactory);
+        $this->fileContentFactory = ObjectManager::getInstance()->create(
+            \Magento\Downloadable\Api\Data\File\ContentInterfaceFactory::class
+        );
+    }
+
+
     /**
      * Get downloadable data from array
      *
@@ -159,11 +175,11 @@ class Converter extends \Magento\CatalogSampleData\Model\Product\Converter
      */
     private function getFileContent()
     {
-        if (!$this->fileContentFactory) {
-            $this->fileContentFactory = ObjectManager::getInstance()->create(
-                \Magento\Downloadable\Api\Data\File\ContentInterfaceFactory::class
-            );
-        }
+//        if (!$this->fileContentFactory) {
+//            $this->fileContentFactory = ObjectManager::getInstance()->create(
+//                \Magento\Downloadable\Api\Data\File\ContentInterfaceFactory::class
+//            );
+//        }
         return $this->fileContentFactory->create();
     }
 
