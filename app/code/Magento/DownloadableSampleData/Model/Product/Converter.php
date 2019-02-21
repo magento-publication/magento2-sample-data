@@ -37,6 +37,9 @@ class Converter extends \Magento\CatalogSampleData\Model\Product\Converter
         $this->fileContentFactory = ObjectManager::getInstance()->create(
             \Magento\Downloadable\Api\Data\File\ContentInterfaceFactory::class
         );
+        $this->filesystem = ObjectManager::getInstance()->create(
+            Filesystem::class
+        );
     }
 
 
@@ -189,11 +192,11 @@ class Converter extends \Magento\CatalogSampleData\Model\Product\Converter
      */
     private function getFilesystem()
     {
-        if (!$this->filesystem) {
-            $this->filesystem = ObjectManager::getInstance()->create(
-                Filesystem::class
-            );
-        }
+//        if (!$this->filesystem) {
+//            $this->filesystem = ObjectManager::getInstance()->create(
+//                Filesystem::class
+//            );
+//        }
         return $this->filesystem;
     }
 }
