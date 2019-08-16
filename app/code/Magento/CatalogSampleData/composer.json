@@ -17,5 +17,6 @@
         "psr-4": {
             "Magento\\CatalogSampleData\\": ""
         }
-    }
+    },
+    "version": "100.3.2"
 }

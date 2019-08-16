@@ -6,7 +6,7 @@
         "magento/module-sample-data": "*",
         "magento/module-catalog-rule-sample-data": "*",
         "magento/module-sales-rule": "*",
-        "magento/module-eav": "*"
+        "magento/module-eav": "102.0.*"
     },
     "type": "magento2-module",
     "license": [
@@ -20,5 +20,6 @@
         "psr-4": {
             "Magento\\SalesRuleSampleData\\": ""
         }
-    }
+    },
+    "version": "100.3.2"
 }

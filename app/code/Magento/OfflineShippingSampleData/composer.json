@@ -19,5 +19,6 @@
         "psr-4": {
             "Magento\\OfflineShippingSampleData\\": ""
         }
-    }
+    },
+    "version": "100.3.2"
 }

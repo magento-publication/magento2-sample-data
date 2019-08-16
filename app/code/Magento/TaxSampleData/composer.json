@@ -18,5 +18,6 @@
         "psr-4": {
             "Magento\\TaxSampleData\\": ""
         }
-    }
+    },
+    "version": "100.3.2"
 }
