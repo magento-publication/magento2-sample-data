@@ -1,11 +1,17 @@
 {
     "name": "magento/module-sales-sample-data",
     "description": "N/A",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "version": "100.3.5",
     "require": {
         "php": "~7.3.0||~7.4.0",
         "magento/framework": "*",
         "magento/module-sales": "*",
-        "magento/module-configurable-sample-data": "*",
+        "magento/module-configurable-sample-data": "100.3.*",
         "magento/module-catalog-inventory": "*",
         "magento/module-customer": "*",
         "magento/module-catalog": "*",
@@ -14,11 +20,6 @@
         "magento/module-shipping": "*",
         "magento/module-store": "*"
     },
-    "type": "magento2-module",
-    "license": [
-        "OSL-3.0",
-        "AFL-3.0"
-    ],
     "autoload": {
         "files": [
             "registration.php"
@@ -28,3 +29,4 @@
         }
     }
 }
+
